@@ -43,6 +43,10 @@ imgpoints = []
 n = 0
 
 images = get_images_from_video('./calib.mp4')
+
+#or from a file that contains the sequence of images
+#get_images_from_file('./')
+
 for gray in images:  
     # Find the chess board corners
     ret, corners = cv2.findChessboardCorners(gray, (chess_h,chess_w), None)
